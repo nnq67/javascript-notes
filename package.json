@@ -1,0 +1,13 @@
+{
+  "name": "js-notes",
+  "version": "1.0.0",
+  "description": "Tổng hợp kiến thức JavaScript từ MDN và W3Schools",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node examples/01-basics/variables.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
