@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Functions</h1>
+
+<p>A function can be used many times.</p>
+
+<p id="demo"></p>
+
+<script>
+// Function to add two numbers
+function add(a, b) {
+  return a + b;
+}
+
+let sum1 = add(5, 5);
+let sum2 = add(50, 50);
+
+document.getElementById("demo").innerHTML = "The results are " + sum1 + " and " + sum2;
+</script>
+
+<h2>Using a function as a variable:</h2>
+
+<p id="demo1"></p>
+
+<script>
+let text = "The temperature is " + toCelsius(77) + " Celsius.";
+document.getElementById("demo1").innerHTML = text;
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+</script>
+
+<h2>You can display the returned value using HTML.</h2>
+
+<p id="demo2"></p>
+
+<script>
+function sayHello() {
+  return "Hello World";
+}
+
+document.getElementById("demo2").innerHTML = sayHello();
+</script>
+
+<h2>You can call functions from events.</h2>
+
+<button onclick="showHello()">Click Me</button>
+
+<p id="demo3"></p>
+
+<script>
+function sayHello() {
+  return "Hello World";
+}
+
+function showHello() {
+  document.getElementById("demo3").innerHTML = sayHello();
+}
+</script>
+
+<h2>Finding the largest number.</h2>
+<p id="demo4"></p>
+
+<script>
+function findMax() {
+  let max = -Infinity;
+  for(let i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
+    }
+  }
+  return max;
+} 
+document.getElementById("demo4").innerHTML = findMax(4, 5, 6);
+</script>
+
+<h2>Arrow Functions</h2>
+
+<p>This example shows the syntax of an Arrow Function, and how to use it.</p>
+
+<p id="demo5"></p>
+
+<script>
+// add computes the product of a and b
+const multiply = (a, b) => a * b;
+
+let result = multiply(4, 5);
+
+document.getElementById("demo5").innerHTML = "The product is: " + result
+</script>
+
+</body>
+</html>

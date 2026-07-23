@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Object Properties</h1>
+<h2>Property Access Using Brackets []</h2>
+
+<p id="demo"></p>
+
+<script>
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  age      :  50
+};
+
+let result = ("firstName" in person);
+
+document.getElementById("demo").innerHTML = result; 
+</script>
+
+</body>
+</html>

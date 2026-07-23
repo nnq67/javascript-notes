@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Arithmetic</h1>
+<h2>Arithmetic Operations</h2>
+<p>A typical arithmetic operation takes two numbers (or expressions) and produces a new number.</p>
+
+<p id="demo"></p>
+
+<script>
+let a = 3;
+let x = (100 + 50) * a;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+<h2>The ** Operator</h2>
+
+<p id="demo1"></p>
+
+<script>
+let x1 = 5;
+document.getElementById("demo1").innerHTML = x1 ** 2;
+</script>
+
+<h1>JavaScript Assignments</h1>
+<h2>Remainder Assignment</h2>
+<h3>The %= Operator</h3>
+
+<p id="demo2"></p>
+
+<script>
+let x2 = 10;
+x2 %= 5;
+document.getElementById("demo2").innerHTML = "Value of x2 is: " + x2;
+</script>
+
+<h2>Addition Assignment</h2>
+<h3>The += Operator</h3>
+
+<p id="demo3"></p>
+
+<script>
+let text = "Hello";
+text += " World";
+document.getElementById("demo3").innerHTML = text;
+</script>
+
+<h2>Logical AND Assignment</h2>
+<h3>The &&= Operator</h3>
+
+<p>If the first value is true, the second value is assigned.</p>
+
+<p id="demo4"></p>
+
+<script>
+let x3 = true;
+let y = x3 &&= 5;
+
+document.getElementById("demo4").innerHTML = "Value of y is: " + y;
+</script>
+
+<h2>Logical OR Assignment</h2>
+<h3>The ||= Operator</h3>
+
+<p>If the first value is false, the second value is assigned:</p>
+
+<p id="demo5"></p>
+
+<script>
+let x5 = false;
+let y2 = x5 ||= 10;
+
+document.getElementById("demo5").innerHTML = "Value of y2 is: " + y2;
+</script>
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Assignments</h1>
+<h2>The Nullish Operator</h2>
+<h3>The ??= Operator</h3>
+
+<p>If the first value is undefined or null, the second value is assigned.</p>
+
+<p id="demo6"></p>
+
+<script>
+let x6 = null;
+x6 ??= 10;
+
+document.getElementById("demo6").innerHTML = "x6 is: " + x6; 
+</script>
+
+<h2>The Spread Operator</h2>
+<h3>The ... Operator</h3>
+
+<p id="demo7"></p>
+
+<script>
+let text1 = "12345";
+let min = Math.min(...text1);
+let max = Math.max(...text1);
+
+document.getElementById("demo7").innerHTML =
+"Minimum is: " + min + "<br>Maximum is: " + max;
+</script>
+
+</body>
+</html>
