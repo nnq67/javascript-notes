@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x; // Declare x
+x = 5; // Assign 5 to x
+
+elem = document.getElementById("demo"); // Find an element 
+elem.innerHTML = x;           // Display x in the element
+</script>
+
+<h1>JavaScript Block Scope</h1>
+
+<p id="demo1"></p>
+
+<script>
+if (true) {
+  var firstName = "John";
+  let lastName = "Doe";
+}
+
+let text1 = text2 = "unknown";
+
+if (typeof firstName !== "undefined") text1 = firstName;
+if (typeof lastName !== "undefined") text2 = lastName;
+
+document.getElementById("demo1").innerHTML =
+"First Name: " +  text1 + "<br><br>" +
+"Last Name: " + text2;
+</script>
+
+<h1>JavaScript const</h1>
+
+<p id="demo2"></p>
+
+<script>
+// Create user object
+const user = { name: "Alice" };
+
+// This will work
+user.name = "Bob";
+let text = user.name + " ";
+
+// This will not work
+try {
+  user = { name: "Charlie" };
+  text += user.name;
+} catch(err) {
+  text += err;
+} 
+
+document.getElementById("demo2").innerHTML = text;
+</script>
+
+</body>
+</html> 

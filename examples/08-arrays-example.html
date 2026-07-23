@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Call a function for each array element:</p>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+
+document.getElementById("demo").innerHTML = text;
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+} 
+</script>
+
+<h1>JavaScript Constructors</h1>
+<h2>The Array() Constructor</h2>
+
+<p id="demo1"></p>
+
+<script>
+const a = new Array();
+const b = new Array(3);
+const c = new Array("3");
+const d = new Array("Saab", "Volvo", "BMW");
+
+document.getElementById("demo1").innerHTML =
+JSON.stringify(a) + "<br>" +
+JSON.stringify(b) + "<br>" +
+JSON.stringify(c) + "<br>" +
+JSON.stringify(d);
+</script>
+
+<h2>The at() Method</h2>
+
+<p>The at() method returns an indexed element from an array:</p>
+
+<p id="demo2"></p>
+
+<script>
+const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits1.at(2);
+
+document.getElementById("demo2").innerHTML = fruit;
+</script>
+
+<h2>The join() Method</h2>
+
+<p>The join() method joins array elements into a string.</p>
+<p>It this example we have used " * " as a separator between the elements:</p>
+
+<p id="demo3"></p>
+
+<script>
+const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo3").innerHTML = fruits2.join(" * ");
+</script>
+
+<h2>The pop() Method</h2>
+
+<p>The pop() method returns the value that was "popped out":</p>
+
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo4").innerHTML = fruits3.pop();
+document.getElementById("demo5").innerHTML = fruits3;
+
+// First sort the array
+fruits3.sort();
+
+// Then reverse it:
+fruits3.reverse();
+
+</script>
+
+</body>
+</html>
