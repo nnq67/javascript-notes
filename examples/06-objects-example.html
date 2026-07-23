@@ -18,5 +18,47 @@ let result = ("firstName" in person);
 document.getElementById("demo").innerHTML = result; 
 </script>
 
+<h2>Object Methods</h2>
+<p>A method is a function definition stored as a property value.</p>
+
+<p id="demo1"></p>
+
+<script>
+const person1 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+document.getElementById("demo1").innerHTML = person1.fullName();
+</script>
+
+<h2>Object Constructors</h2>
+
+<p id="demo2"></p>
+
+<script>
+
+// Constructor function for Person objects
+function Person2(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "English";
+}
+
+// Create 2 Person objects
+const myFather = new Person2("John", "Doe", 50, "blue");
+const myMother = new Person2("Sally", "Rally", 48, "green");
+
+// Display nationality
+document.getElementById("demo2").innerHTML =
+"My father is " + myFather.nationality + ". My mother is " + myMother.nationality; 
+</script>
+
 </body>
 </html>
